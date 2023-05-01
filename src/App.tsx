@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import PrimaryInput from "./components/Input/PrimaryInput";
-import { Button } from "@chakra-ui/react";
+import { Button, Spacer } from "@chakra-ui/react";
 
 function App() {
   const [email, setEmail] = useState("");
@@ -19,6 +19,7 @@ function App() {
             label="Nome"
             placeholder="João"
           />
+
           <PrimaryInput
             value={secondName}
             onChange={(event) => setSecondName(event.target.value)}
@@ -34,7 +35,9 @@ function App() {
           label="Digite seu e-mail"
           placeholder="fulano@email.com"
         />
-        <Button colorScheme="green">Enviar</Button>
+        <Button colorScheme="green" width="100%" mt="4">
+          Enviar
+        </Button>
       </form>
     </div>
   );
