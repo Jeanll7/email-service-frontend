@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import PrimaryInput from "./components/Input/PrimaryInput";
-import { Button, Spacer } from "@chakra-ui/react";
+import { Button, Spacer, Square } from "@chakra-ui/react";
 
 function App() {
   const [email, setEmail] = useState("");
@@ -39,6 +39,10 @@ function App() {
           Enviar
         </Button>
       </form>
+      <div className="product-details">
+        <p>Você ira pagar</p>
+        <span>R$ 250,00</span>
+      </div>
     </div>
   );
 }
