@@ -11,6 +11,16 @@
     flex-direction: column;
 }
 
-.label {
-    width: 60%;
+.container form {
+    padding: 32px;
+    box-shadow: rgba(0, 0, 0, 0.486) 0px 3px 6px, rgba(0, 0, 0, 0.329) 0px 3px 6px;
+    margin: auto;
+    border-radius: 12px;
+}
+
+.container form .name-form-container {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 22px;
 }

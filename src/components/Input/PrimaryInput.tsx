@@ -7,6 +7,7 @@ interface PrimaryInputPrpops {
   value: string;
   onChange: ChangeEventHandler<HTMLInputElement>;
   label: string;
+  placeholder: string;
 }
 
 export default function PrimaryInput({
@@ -14,6 +15,7 @@ export default function PrimaryInput({
   value,
   onChange,
   label,
+  placeholder,
 }: PrimaryInputPrpops) {
   return (
     <div className="input-container">
@@ -21,7 +23,7 @@ export default function PrimaryInput({
       <Input
         className="input"
         variant="filled"
-        placeholder="Digite seu E-mail"
+        placeholder={placeholder}
         name={name}
         value={value}
         onChange={onChange}
