@@ -1,1 +1,3 @@
-- react query
+- React Query
+
+- React Hook Form
