@@ -34,11 +34,19 @@
     background-color: #222231f1;
     box-shadow: rgba(0, 0, 0, 0.486) 0px 3px 6px, rgba(0, 0, 0, 0.329) 0px 3px 6px;
     height: 300px;
-    width: 200px;
+    width: 300px;
+}
+
+.container .product-details h2 {
+    text-align: start;
+    font-size: 30px;
+    color: #ddd;
+    font-weight: 600;
 }
 
 .container .product-details p {
     color: #616161;
+    text-align: start;
 }
 
 .container .product-details span {
@@ -47,4 +55,9 @@
     text-align: start;
     width: 100%;
     color: #eee;
+    display: block !important;
+}
+
+.container .product-details .paragraph {
+    color: rgb(191, 228, 191);
 }
