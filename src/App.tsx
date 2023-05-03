@@ -5,10 +5,16 @@ import { Button, Spacer } from "@chakra-ui/react";
 import { useIdentityMutation } from "./hooks/useIdentityMutation";
 
 function App() {
-  const { mutate, isLoading } = useIdentityMutation();
+  const { mutate } = useIdentityMutation();
   const [email, setEmail] = useState("");
   const [firstName, setFirstName] = useState("");
   const [secondName, setSecondName] = useState("");
+
+  const resetFields = () => {
+    setEmail("");
+    setFirstName("");
+    setSecondName("");
+  };
 
   const submit = () => {
     mutate({
@@ -16,6 +22,7 @@ function App() {
       firstName,
       lastName: secondName,
     });
+    resetFields();
   };
 
   return (
