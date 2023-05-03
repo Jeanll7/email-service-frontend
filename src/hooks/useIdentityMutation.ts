@@ -7,7 +7,14 @@ const postData = (data: PersonData) => {
 };
 
 export function useIdentityMutation() {
-  const {} = useMutation({
+  const { mutate, isLoading, isSuccess, isError } = useMutation({
     mutationFn: (data: PersonData) => postData(data),
   });
+
+  return {
+    mutate,
+    isLoading,
+    isSuccess,
+    isError,
+  };
 }

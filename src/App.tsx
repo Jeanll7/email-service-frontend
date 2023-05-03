@@ -1,19 +1,29 @@
 import React, { useState } from "react";
 import "./App.css";
 import PrimaryInput from "./components/Input/PrimaryInput";
-import { Button, Spacer, Text } from "@chakra-ui/react";
+import { Button, Spacer } from "@chakra-ui/react";
+import { useIdentityMutation } from "./hooks/useIdentityMutation";
 
 function App() {
+  const { mutate, isLoading } = useIdentityMutation();
   const [email, setEmail] = useState("");
-  const [fistName, setFirstName] = useState("");
+  const [firstName, setFirstName] = useState("");
   const [secondName, setSecondName] = useState("");
+
+  const submit = () => {
+    mutate({
+      email,
+      firstName,
+      lastName: secondName,
+    });
+  };
 
   return (
     <div className="container">
       <form>
         <div className="name-form-container">
           <PrimaryInput
-            value={fistName}
+            value={firstName}
             onChange={(event) => setFirstName(event.target.value)}
             name="firstName"
             label="Nome"
@@ -35,7 +45,7 @@ function App() {
           label="Digite seu e-mail"
           placeholder="fulano@email.com"
         />
-        <Button colorScheme="green" width="100%" mt="4">
+        <Button colorScheme="green" width="100%" mt="4" onClick={submit}>
           Enviar
         </Button>
       </form>
